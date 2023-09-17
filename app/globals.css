@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Width of the scrollbar track */
+::-webkit-scrollbar {
+    width: 12px; /* You can adjust the width as needed */
+  }
+  
+  /* Track (the area on which the thumb and the track resides) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* You can change the background color */
+  }
+  
+  /* Thumb (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* You can change the thumb color */
+    border-radius: 6px; /* You can adjust the border radius for a rounded appearance */
+  }
+  
+  /* On hover, style the thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change the thumb color on hover */
+  }
