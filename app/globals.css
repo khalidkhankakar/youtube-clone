@@ -17,7 +17,7 @@
     border-radius: 6px; /* You can adjust the border radius for a rounded appearance */
   }
   
-  /* On hover, style the thumb */
+
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Change the thumb color on hover */
+    background: #555; 
   }

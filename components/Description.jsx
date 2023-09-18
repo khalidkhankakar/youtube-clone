@@ -2,14 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { formatDistanceToNow } from 'date-fns';
-
 import { FaThumbsUp,FaComment, FaThumbsDown, FaDownload, FaShare } from 'react-icons/fa';
 const Description = ({ results }) => {
 
-  function getTimeAgo(timestamp) {
-    return formatDistanceToNow(new Date(timestamp), { addSuffix: true });
-  }
+
   const [isShowMore, setIsShowMore] = useState(false);
 
   function formatViews(views) {
@@ -40,7 +36,7 @@ const Description = ({ results }) => {
               <Image width={32} height={32} className="w-8 h-8 rounded-full" src={results?.snippet?.thumbnails?.high?.url} alt="Neil image" />
             </div>
             <div className="flex-1 min-w-0">
-              <Link href={`/Channel/${results.snippet.channelId}`}><span className="text-sm hover:underline font-medium text-black ">{results.snippet.channelTitle}</span></Link>
+              <Link href={`/channel/${results.snippet.channelId}`}><span className="text-sm hover:underline font-medium text-black ">{results.snippet.channelTitle}</span></Link>
             </div>
             <button className="flex-1  bg-black/10 rounded-full text-black py-1 px-2 ">Subscribe</button>
           </div>
@@ -58,7 +54,7 @@ const Description = ({ results }) => {
 <div className="px-2 py-1 bg-black/10 shadow-md rounded-md">
 
       <span className="text-sm mx-3 text-black my-1 font-medium">{formatViews(results.statistics.viewCount)} Views</span>
-      <span className="text-sm mx-3 text-black my-1 font-medium">{getTimeAgo(results.snippet.publishedAt)}</span>
+
       {
         isShowMore ? <p className="text-sm font-normal">{results.snippet.description}</p> : <p className="text-sm font-normal">{results.snippet.description.substr(0, 50)} ...</p>
       }

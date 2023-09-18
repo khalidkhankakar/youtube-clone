@@ -18,7 +18,7 @@ const Nav = () => {
 
   const handleSubmit = (e) => { 
     e.preventDefault();
-router.push(`/Search/${searchText}`)
+router.push(`/search/${searchText}`)
    }
 
   return (
@@ -66,7 +66,7 @@ router.push(`/Search/${searchText}`)
         <form onSubmit={handleSubmit} className="rounded-full border  flex items-center py-1 px-3 " action="">
         <IoIosSearch  className="text-2xl border-r cursor-pointer"/>
         <input value={searchText} onChange={(e)=> setSearchText(e.target.value)} type="text" className="outline-none bg-none py-1 px-2" />
-        <Link href={`/Search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
+        <Link href={`/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
         </form>
         {/* mircophone icon */}
         <BiSolidMicrophone  className="text-2xl"/>
@@ -99,7 +99,7 @@ router.push(`/Search/${searchText}`)
                 <form onSubmit={handleSubmit} className="rounded-full border justify-between w-[50%] flex items-center py-1 px-3 " action="">
         <IoIosSearch  className="text-2xl border-r cursor-pointer"/>
         <input value={searchText} onChange={(e)=> setSearchText(e.target.value)} type="text" className="outline-none bg-none py-1 px-2 w-[92%]" />
-        <Link href={`/Search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
+        <Link href={`/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
         </form>
         {/* right div */}
         <div className="flex space-x-4 items-center">

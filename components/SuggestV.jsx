@@ -8,7 +8,7 @@ const SuggestV = ({results}) => {
   {
     results.map((item)=>(
     <div key={item.snippet.publishedAt} class=" my-2  border-gray-600  rounded-lg shadow">
-    <Link href={`/Watch/${item.id.videoId}`}>
+    <Link href={`/watch/${item.id.videoId}`}>
         <Image src={item?.snippet?.thumbnails?.high?.url} width={500} height={500}  class="rounded-t-lg  h-[11.5rem] object-cover"  alt="logoing.." />
     </Link>
     <div class="p-1">
