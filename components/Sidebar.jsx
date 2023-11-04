@@ -10,7 +10,7 @@ const Sidebar = () => {
 
         <div className="sticky left-0 top-0 z-20 flex h-screen w-fit flex-col  pt-24 gap-4 items-center  max-md:hidden bg-white ">
             <div className="flex flex-col items-center justify-center">
-            <Link href={'/'}><GoHomeFill className="text-2xl text-red-700" /></Link>
+            <Link href={`${process.env.PRODUCTION_URL}`}><GoHomeFill className="text-2xl text-red-700" /></Link>
                 <span className="text-sm text-red-700">Home</span>
             </div>
             <div className="flex flex-col items-center justify-center">
@@ -27,7 +27,7 @@ const Sidebar = () => {
             </div>
         </div>
         <div className="fixed rounded-t-3xl w-full py-3 shadow-xl  md:hidden bg-white lg:hidden xl:hidden flex items-center bottom-0  z-30 justify-around">
-        <Link href={'/'}><GoHomeFill className="text-2xl text-red-700" /></Link>
+        <Link href={`${process.env.PRODUCTION_URL}`}><GoHomeFill className="text-2xl text-red-700" /></Link>
             <BsCameraVideo className="text-2xl text-black" />
             <AiOutlinePlusCircle className="text-3xl text-black"/>
             <MdSubscriptions className="text-2xl text-black" />

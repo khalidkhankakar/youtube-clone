@@ -37,7 +37,7 @@ export const getRandomQuery = () => {
 
 
 const headers = {
-    'X-RapidAPI-Key': '188f914a41msh1173a21487141aap17c814jsnb145380aef56',
+    'X-RapidAPI-Key': process.env.YOUTUBE_SECRET_API_KEY,
     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
 }
 

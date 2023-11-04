@@ -23,7 +23,7 @@ const mainVid = await Cvideos.items;
 
   return (
     <>
-      <section class="channel-banner flex-shrink-0 w-full h-[7rem] md:h-[14rem] justify-end items-end bg-cover bg-center p-4" style={{ backgroundImage: `url(${mainData.brandingSettings.image.bannerExternalUrl})` }} />
+      <section className="channel-banner flex-shrink-0 w-full h-[7rem] md:h-[14rem] justify-end items-end bg-cover bg-center p-4" style={{ backgroundImage: `url(${mainData.brandingSettings.image.bannerExternalUrl})` }} />
 
       <section className="bg-black/10 mt-1 flex flex-col py-2 justify-center sm:items-center md:flex-row md:justify-between">
         <div className="logo flex gap-4 flex-col md:flex-row justify-center items-center">
@@ -41,43 +41,43 @@ const mainVid = await Cvideos.items;
           <h1 className="text-lg hidden font-bold md:block cursor-pointer text-red-500 hover:font-semibold rounded-full  mt-3 py-1 px-5">Subscribe</h1>
         </div>
       </section>
-      <div class="featured-video  flex cursor-pointer my-2">
+      <div className="featured-video  flex cursor-pointer my-2">
 
-        <div class="video-thumbnail pr-6">
+        <div className="video-thumbnail pr-6">
           <MiniChannelVideo videoId={mainVid[0].id.videoId}/>
         </div>
 
-        <div class="video-info flex-1">
-          <h3 class="video-title text-xl font-normal">{mainVid[0].snippet.channelTitle}</h3>
+        <div className="video-info flex-1">
+          <h3 className="video-title text-xl font-normal">{mainVid[0].snippet.channelTitle}</h3>
         </div>
       </div>
 <hr className="text-gray-900 w-[90%] m-auto my-2" />
 
-      <nav class="channel-nav rounded-md px-3 bg-black/30 ">
+      <nav className="channel-nav rounded-md px-3 bg-black/30 ">
 
-        <div class="container">
+        <div className="container">
           <ul className="flex justify-between items-center ">
-            <li class="nav-item inline-block text-base font-medium uppercase  text-gray-200 px-2 py-2 hover:text-black">Home</li>
-            <li class="nav-item inline-block text-base font-medium uppercase  text-black">Videos</li>
-            <li class="nav-item inline-block text-base font-medium uppercase  text-gray-200  py-2 hover:text-black">Playlists</li>
-            <li class="nav-item inline-block text-base font-medium uppercase  text-gray-200  py-2 hover:text-black">About</li>
-            <li class="nav-item inline-block text-base font-medium uppercase  text-gray-200 px-2 py-2 hover:text-black">Community</li>
+            <li className="nav-item inline-block text-base font-medium uppercase  text-gray-200 px-2 py-2 hover:text-black">Home</li>
+            <li className="nav-item inline-block text-base font-medium uppercase  text-black">Videos</li>
+            <li className="nav-item inline-block text-base font-medium uppercase  text-gray-200  py-2 hover:text-black">Playlists</li>
+            <li className="nav-item inline-block text-base font-medium uppercase  text-gray-200  py-2 hover:text-black">About</li>
+            <li className="nav-item inline-block text-base font-medium uppercase  text-gray-200 px-2 py-2 hover:text-black">Community</li>
           </ul>
         </div>
       </nav>
 
 
-      <section class="text-gray-600 body-font">
-  <div class="container px-2 py-8 mx-auto">
-    <div class="flex flex-wrap -m-4">
+      <section className="text-gray-600 body-font">
+  <div className="container px-2 py-8 mx-auto">
+    <div className="flex flex-wrap -m-4">
 
     {mainVid.map((item)=>(
-      <div key={item.snippet.publishedAt} class="p-2 md:w-1/4">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <Link href={`/watch/${item.id.videoId}`}><Image src={item?.snippet?.thumbnails?.high?.url} width={500} height={500} class="lg:h-48 md:h-36 w-full object-cover"  alt="blog"/></Link>
-          <div class="p-2">
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-1">{item.snippet.title}</h1>
-            <p class="leading-relaxed mb-1">{item.snippet.channelTitle}</p>
+      <div key={item.snippet.publishedAt} className="p-2 md:w-1/4">
+        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <Link href={`${process.env.PRODUCTION_URL}/watch/${item.id.videoId}`}><Image src={item?.snippet?.thumbnails?.high?.url} width={500} height={500} className="lg:h-48 md:h-36 w-full object-cover"  alt="blog"/></Link>
+          <div className="p-2">
+            <h1 className="title-font text-lg font-medium text-gray-900 mb-1">{item.snippet.title}</h1>
+            <p className="leading-relaxed mb-1">{item.snippet.channelTitle}</p>
           </div>
         </div>
       </div>    ))}

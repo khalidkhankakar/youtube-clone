@@ -36,7 +36,7 @@ const Description = ({ results }) => {
               <Image width={32} height={32} className="w-8 h-8 rounded-full" src={results?.snippet?.thumbnails?.high?.url} alt="Neil image" />
             </div>
             <div className="flex-1 min-w-0">
-              <Link href={`/channel/${results.snippet.channelId}`}><span className="text-sm hover:underline font-medium text-black ">{results.snippet.channelTitle}</span></Link>
+              <Link href={`${process.env.PRODUCTION_URL}/channel/${results.snippet.channelId}`}><span className="text-sm hover:underline font-medium text-black ">{results.snippet.channelTitle}</span></Link>
             </div>
             <button className="flex-1  bg-black/10 rounded-full text-black py-1 px-2 ">Subscribe</button>
           </div>

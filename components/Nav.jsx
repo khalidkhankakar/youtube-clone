@@ -30,7 +30,7 @@ router.push(`/search/${searchText}`)
         {/* left div */}
         <div className="flex  space-x-6 items-center">
         <RxHamburgerMenu className="text-2xl text-black" />
-            <Link href={'/'}><svg className="w-20 " viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <Link href={`${process.env.PRODUCTION_URL}`}><svg className="w-20 " viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <g>
       <path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z" fill="#FF0000"></path>
       <path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path>
@@ -66,7 +66,7 @@ router.push(`/search/${searchText}`)
         <form onSubmit={handleSubmit} className="rounded-full border  flex items-center py-1 px-3 " action="">
         <IoIosSearch  className="text-2xl border-r cursor-pointer"/>
         <input value={searchText} onChange={(e)=> setSearchText(e.target.value)} type="text" className="outline-none bg-none py-1 px-2" />
-        <Link href={`/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
+        <Link href={`${process.env.PRODUCTION_URL}/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
         </form>
         {/* mircophone icon */}
         <BiSolidMicrophone  className="text-2xl"/>
@@ -77,7 +77,7 @@ router.push(`/search/${searchText}`)
         {/* left div */}
         <div className="flex  space-x-6 items-center">
         <RxHamburgerMenu className="text-2xl text-black" />
-        <Link href={'/'}><svg className="w-20 " viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <Link href={`${process.env.PRODUCTION_URL}`}><svg className="w-20 " viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
     <g>
       <path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z" fill="#FF0000"></path>
       <path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path>
@@ -99,7 +99,7 @@ router.push(`/search/${searchText}`)
                 <form onSubmit={handleSubmit} className="rounded-full border justify-between w-[50%] flex items-center py-1 px-3 " action="">
         <IoIosSearch  className="text-2xl border-r cursor-pointer"/>
         <input value={searchText} onChange={(e)=> setSearchText(e.target.value)} type="text" className="outline-none bg-none py-1 px-2 w-[92%]" />
-        <Link href={`/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
+        <Link href={`${process.env.PRODUCTION_URL}/search/${searchText}`}><IoIosSearch className=" border-l text-2xl cursor-pointer"/></Link>
         </form>
         {/* right div */}
         <div className="flex space-x-4 items-center">
